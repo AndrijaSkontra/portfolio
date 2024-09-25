@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is a portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "runp"
+  },
+  "author": "me",
+  "license": "ISC"
+}
