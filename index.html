@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Andrija Škontra - Portfolio</title>
-    <link href="./styles.css" rel="stylesheet" />
+    <link href="./assets/styles/main.css" rel="stylesheet" />
+    <script async type="module" src="./src/main.js"></script>
   </head>
-  <body class="background">
-    <header>
-      <h1 class="name">Andrija Škontra</h1>
-      <h2>Software Developer</h2>
-    </header>
+  <body>
+    <h2>My Dev Journey</h2>
 
-    <section class="about-me">
+    <div class="about-me">
       <h3>About Me</h3>
       <p>Hi, I'm Andrija Škontra, a passionate Software Developer.</p>
       <ul>
@@ -20,9 +18,9 @@
         <li><strong>Education:</strong> University of Zadar (UNIZD)</li>
         <li><strong>Favorite Language:</strong> Definitely not Java!</li>
       </ul>
-    </section>
+    </div>
 
-    <section>
+    <div>
       <h3>Hobbies</h3>
       <ul>
         <li>Basketball</li>
@@ -30,7 +28,16 @@
         <li>Chess</li>
         <li>Esports</li>
       </ul>
-    </section>
+    </div>
+
+    <div class="tech-div">
+      <p style="color: black">My Tech Journey</p>
+      <img src="./assets/images/python2.png" id="shown-icon" data-number="0" />
+      <button id="change-image">Next</button>
+      <p style="color: black" id="change-desc">
+        Learned about variables, conditionals and loops in Python
+      </p>
+    </div>
 
     <footer class="foot">
       <p>&copy; 2024 Andrija Škontra. All rights reserved.</p>
