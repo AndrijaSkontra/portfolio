@@ -1,0 +1,34 @@
+@import url("globals.css");
+
+.tech-div-main {
+  display: flex;
+  align-items: stretch;
+}
+
+#tech-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+
+#tech-div-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#change-desc {
+  max-width: 30ch; /* Limits the text width to approximately 50 characters */
+}
+
+#tech-stack-date {
+  text-align: center;
+}
+
+#tech-time {
+  display: flex;
+  justify-items: center;
+  font-weight: 100;
+  color: var(--second-text-color);
+}

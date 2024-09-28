@@ -38,6 +38,7 @@ export const techStack = [
   {
     filePath: "network1.png",
     tool: "Had an amazing professor that really made me like computer networking and protocols",
+    date: "Second year of college",
   },
   {
     filePath: "database2.png",
@@ -47,6 +48,7 @@ export const techStack = [
   {
     filePath: "nestjs.svg",
     tool: "Started to learn about basic backend stuff in NESTJS",
+    date: "Second year of college",
   },
   {
     filePath: "angular.svg",

@@ -1,4 +1,6 @@
 :root {
-  --main-text-color: #b5b3bd;
+  --main-text-color: hsl(252, 7%, 72%);
+  --second-text-color: hsl(252, 7%, 30%);
   --sec-color-background: #9ea8a3;
+  --linear-color-background: linear-gradient(90deg, #9ea8a3 0%, #5a605d 100%);
 }

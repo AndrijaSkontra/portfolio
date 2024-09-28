@@ -1,5 +1,7 @@
 @import url("fonts.css");
 @import url("globals.css");
+@import url("orange-button.css");
+@import url("tech-stack.css");
 
 .name {
   background: linear-gradient(
@@ -39,7 +41,6 @@ body {
 }
 
 button {
-  font-family: "MyCustomFont", sans-serif;
   font-weight: bold;
   background-color: transparent;
   color: var(--main-text-color);
@@ -48,41 +49,12 @@ button {
 }
 
 .foot p {
-  color: red;
+  color: #fc541c;
 }
 
-#shown-icon {
-  width: 50px;
-  margin-bottom: 20px;
-}
-
-#change-image {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 0.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  color: black;
-}
-
-.tech-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--sec-color-background);
-  border-radius: 20px;
-  justify-items: center;
-  width: 321px;
-  height: 277px;
-}
-
-#change-desc {
-  max-width: 30ch; /* Limits the text width to approximately 50 characters */
-  word-wrap: break-word;
-  word-break: break-word;
-  margin: 0 auto; /* Center the paragraph block horizontally */
-  text-align: center; /* Center the text inside the paragraph */
+h4 {
+  color: hsl(18, 77%, 45%);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
 }

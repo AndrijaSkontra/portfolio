@@ -8,36 +8,43 @@
     <script async type="module" src="./src/main.js"></script>
   </head>
   <body>
-    <h2>My Dev Journey</h2>
+    <h4>About Me</h4>
+    <p>Hi, I'm Andrija Škontra, a passionate Software Developer.</p>
+    <ul>
+      <li><strong>Age:</strong> 22</li>
+      <li><strong>Education:</strong> University of Zadar (UNIZD)</li>
+      <li><strong>Favorite Language:</strong> Definitely not Java!</li>
+    </ul>
 
-    <div class="about-me">
-      <h3>About Me</h3>
-      <p>Hi, I'm Andrija Škontra, a passionate Software Developer.</p>
-      <ul>
-        <li><strong>Age:</strong> 22</li>
-        <li><strong>Education:</strong> University of Zadar (UNIZD)</li>
-        <li><strong>Favorite Language:</strong> Definitely not Java!</li>
-      </ul>
-    </div>
+    <h4>Hobbies</h4>
+    <ul>
+      <li>Basketball</li>
+      <li>Teamfight Tactics (TFT)</li>
+      <li>Chess</li>
+      <li>Esports</li>
+    </ul>
 
-    <div>
-      <h3>Hobbies</h3>
-      <ul>
-        <li>Basketball</li>
-        <li>Teamfight Tactics (TFT)</li>
-        <li>Chess</li>
-        <li>Esports</li>
-      </ul>
+    <h4>My Tech Journey</h4>
+    <div class="tech-div-main">
+      <div id="tech-div-image">
+        <img
+          src="./assets/images/python2.png"
+          id="tech-image"
+          data-number="0"
+        />
+      </div>
+      <div id="tech-div-text">
+        <p id="change-desc">
+          My first real programming experience, started to learn about
+          variables, conditionals, loops and functions.
+        </p>
+        <div id="tech-time">
+          <p style="display: inline; margin-right: 2px">Time:</p>
+          <p id="tech-stack-date">First year of coding</p>
+        </div>
+      </div>
     </div>
-
-    <div class="tech-div">
-      <p style="color: black">My Tech Journey</p>
-      <img src="./assets/images/python2.png" id="shown-icon" data-number="0" />
-      <button id="change-image">Next</button>
-      <p style="color: black" id="change-desc">
-        Learned about variables, conditionals and loops in Python
-      </p>
-    </div>
+    <button id="change-image-button" class="button-78">Next</button>
 
     <footer class="foot">
       <p>&copy; 2024 Andrija Škontra. All rights reserved.</p>
