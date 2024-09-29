@@ -1,25 +1,48 @@
 import { techStack } from "./data.js";
 
-// get all need document elements
 const shownTechImage = document.getElementById("tech-image");
 const shownTechDesc = document.getElementById("change-desc");
 const shownTechDate = document.getElementById("tech-stack-date");
-const changeImageButton = document.getElementById("change-image-button");
+const nextImageButton = document.getElementById("change-image-button-next");
+const prevImageButton = document.getElementById("change-image-button-back");
 
-changeImageButton.addEventListener("click", () => {
-  shownTechImage.setAttribute(
-    "data-number",
-    String(Number(shownTechImage.getAttribute("data-number")) + 1),
-  );
+techStackListCycle(nextImageButton, prevImageButton, (num) => num + 1);
+techStackListCycle(prevImageButton, nextImageButton, (num) => num - 1);
 
-  const currentPicture =
-    "./assets/images/" +
-    techStack[shownTechImage.getAttribute("data-number")].filePath;
-  shownTechImage.setAttribute("src", currentPicture);
+/**
+ * This is not a pure function so use it with care!
+ * It is used to add functionality to the buttons that change the "Tech stack"
+ * @param buttonClicked the button that we want to activate on click
+ * @param directionFunction function that changes the image data-number
+ */
+function techStackListCycle(buttonClicked, otherButton, directionFunction) {
+  buttonClicked.addEventListener("click", () => {
+    let currentNumber = Number(shownTechImage.getAttribute("data-number"));
+    const newNumber = directionFunction(currentNumber);
+    otherButton.style.display = "inline";
 
-  shownTechDesc.innerText =
-    techStack[shownTechImage.getAttribute("data-number")].tool;
+    if (newNumber === techStack.length) {
+      shownTechImage.setAttribute("data-number", techStack.length - 1);
+      return null;
+    }
+    if (newNumber === -1) {
+      shownTechImage.setAttribute("data-number", 0);
+      return null;
+    }
+    if (newNumber === techStack.length - 1) {
+      buttonClicked.style.display = "none";
+    }
+    if (newNumber === 0) {
+      buttonClicked.style.display = "none";
+    }
 
-  shownTechDate.innerText =
-    techStack[shownTechImage.getAttribute("data-number")].date;
-});
+    shownTechImage.setAttribute("data-number", newNumber);
+    const currentTech = techStack[newNumber];
+    shownTechImage.setAttribute(
+      "src",
+      `./assets/images/${currentTech.filePath}`,
+    );
+    shownTechDesc.innerText = currentTech.tool;
+    shownTechDate.innerText = currentTech.date;
+  });
+}

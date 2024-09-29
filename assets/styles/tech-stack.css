@@ -3,6 +3,7 @@
 .tech-div-main {
   display: flex;
   align-items: stretch;
+  height: 200px;
 }
 
 #tech-image {
@@ -19,7 +20,8 @@
 }
 
 #change-desc {
-  max-width: 30ch; /* Limits the text width to approximately 50 characters */
+  max-width: 30ch;
+  margin-top: 0px;
 }
 
 #tech-stack-date {
@@ -28,7 +30,19 @@
 
 #tech-time {
   display: flex;
-  justify-items: center;
+  justify-content: end;
+  align-items: end;
+  flex-grow: 1;
   font-weight: 100;
   color: var(--second-text-color);
+  margin-top: -10px;
+}
+
+#tech-div-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* in case I need to add something around buttons */
+#tech-stack-buttons {
 }
