@@ -17,7 +17,7 @@ techStackListCycle(prevImageButton, nextImageButton, (num) => num - 1);
  */
 function techStackListCycle(buttonClicked, otherButton, directionFunction) {
   buttonClicked.addEventListener("click", () => {
-    let currentNumber = Number(shownTechImage.getAttribute("data-number"));
+    const currentNumber = Number(shownTechImage.getAttribute("data-number"));
     const newNumber = directionFunction(currentNumber);
     otherButton.style.display = "inline";
 
