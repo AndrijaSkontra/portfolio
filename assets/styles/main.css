@@ -44,7 +44,6 @@ body {
 button {
   font-weight: bold;
   background-color: transparent;
-  color: var(--main-text-color);
   border-color: var(--main-text-color);
   cursor: pointer;
 }
@@ -58,4 +57,8 @@ h4 {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 25px;
+}
+
+a {
+  color: var(--main-text-color);
 }
