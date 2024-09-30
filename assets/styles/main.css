@@ -17,6 +17,7 @@
 
 body {
   background: linear-gradient(180deg, #222b38 0%, #000000 100%);
+  background-attachment: fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,7 +54,7 @@ button {
 }
 
 h4 {
-  color: hsl(18, 77%, 45%);
+  color: var(--orange-main-color);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 25px;

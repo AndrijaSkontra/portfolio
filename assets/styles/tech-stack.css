@@ -6,6 +6,12 @@
   height: 200px;
 }
 
+@media only screen and (max-width: 600px) {
+  .tech-div-main {
+    height: 250px;
+  }
+}
+
 #tech-image {
   width: 100px;
   height: 100px;
