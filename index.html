@@ -8,57 +8,81 @@
     <script async type="module" src="./src/main.js"></script>
   </head>
   <body>
-    <h4>About Me</h4>
-    <ul>
-      <li><strong>Age:</strong> 22</li>
-      <li>
-        <strong>Education:</strong> Information Technology at
-        <a href="https://sit.unizd.hr/"> UNIZD </a>
-      </li>
-      <li><strong>Favorite Language:</strong> Definitely not Java!</li>
-    </ul>
-
-    <h4>Hobbies</h4>
-    <ul>
-      <li>Basketball</li>
-      <li>Teamfight Tactics (TFT)</li>
-      <li>Chess</li>
-      <li>Esports</li>
-    </ul>
-
-    <h4>My Tech Journey</h4>
-    <div class="tech-div-main">
-      <div id="tech-div-image">
-        <img
-          src="./assets/images/python2.png"
-          id="tech-image"
-          data-number="0"
-        />
-      </div>
-      <div id="tech-div-text">
-        <p id="change-desc">
-          My first real programming experience, started to learn about
-          variables, conditionals, loops and functions.
-        </p>
-        <div id="tech-time">
-          <p style="display: inline; margin-right: 2px">Time:</p>
-          <p id="tech-stack-date">2022 fall</p>
+    <div id="main-div">
+      <div class="just-border">
+        <div draggable="true" class="drag-elem" id="about-me-sec">
+          <h4>About Me</h4>
+          <ul>
+            <li>
+              <strong>College:</strong> Information Technology at
+              <a href="https://sit.unizd.hr/"> UNIZD </a>
+            </li>
+            <li>
+              <strong>Languages I can use decently ok:</strong> Java, JS/TS
+            </li>
+            <li><strong>Languages I want to get better at:</strong> Elixir</li>
+            <li><strong>Age:</strong> 22</li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div id="tech-stack-buttons">
-      <button
-        style="display: none"
-        id="change-image-button-back"
-        class="button-78"
-      >
-        Back
-      </button>
-      <button id="change-image-button-next" class="button-78">Next</button>
-    </div>
 
+      <div class="just-border">
+        <div draggable="true" id="tech-div-main-main" class="drag-elem">
+          <h4>My Tech Journey</h4>
+          <div class="tech-div-main">
+            <div id="tech-div-image">
+              <img
+                draggable="false"
+                src="./assets/images/python2.png"
+                id="tech-image"
+                data-number="0"
+              />
+            </div>
+            <div id="tech-div-text">
+              <p id="change-desc">
+                My first real programming experience, started to learn about
+                variables, conditionals, loops and functions.
+              </p>
+              <div id="tech-time">
+                <p style="display: inline; margin-right: 2px">Time:</p>
+                <p id="tech-stack-date">2022 fall</p>
+              </div>
+            </div>
+          </div>
+          <div id="tech-stack-buttons">
+            <button
+              style="display: none"
+              id="change-image-button-back"
+              class="button-78"
+            >
+              Back
+            </button>
+            <button id="change-image-button-next" class="button-78">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="just-border"></div>
+      <div class="just-border"></div>
+      <div class="just-border"></div>
+      <div class="just-border"></div>
+    </div>
     <footer class="foot">
       <p>&copy; 2024 Andrija Škontra. All rights reserved.</p>
     </footer>
+
+    <!-- HTML -->
+    <div id="customModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img
+          src="./assets/images/darktutorial2.png"
+          alt="Description of image"
+          style="width: 800px"
+        />
+      </div>
+    </div>
   </body>
 </html>

@@ -49,6 +49,8 @@
   flex-direction: column;
 }
 
-/* in case I need to add something around buttons */
-#tech-stack-buttons {
+#tech-div-main-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

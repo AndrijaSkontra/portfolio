@@ -1,48 +1,55 @@
-import { techStack } from "./data.js";
+import "./tech-stack.js"; // only here to run the tech-stack file
 
-const shownTechImage = document.getElementById("tech-image");
-const shownTechDesc = document.getElementById("change-desc");
-const shownTechDate = document.getElementById("tech-stack-date");
-const nextImageButton = document.getElementById("change-image-button-next");
-const prevImageButton = document.getElementById("change-image-button-back");
+const dragBoxes = Array.from(document.getElementsByClassName("drag-elem"));
+const img = new Image();
+img.src = "../assets/images/droptemp.png";
 
-techStackListCycle(nextImageButton, prevImageButton, (num) => num + 1);
-techStackListCycle(prevImageButton, nextImageButton, (num) => num - 1);
+for (const dragBox of dragBoxes) {
+  dragBox.addEventListener("dragstart", dragstartHandler);
+}
 
-/**
- * This is not a pure function so use it with care!
- * It is used to add functionality to the buttons that change the "Tech stack"
- * @param buttonClicked the button that we want to activate on click
- * @param directionFunction function that changes the image data-number
- */
-function techStackListCycle(buttonClicked, otherButton, directionFunction) {
-  buttonClicked.addEventListener("click", () => {
-    const currentNumber = Number(shownTechImage.getAttribute("data-number"));
-    const newNumber = directionFunction(currentNumber);
-    otherButton.style.display = "inline";
+function dragstartHandler(currentEvent) {
+  currentEvent.dataTransfer.setDragImage(img, 300, 200);
+  currentEvent.dataTransfer.setData(
+    "application/my-node", // set draganddrop id
+    currentEvent.target.id,
+  );
+}
 
-    if (newNumber === techStack.length) {
-      shownTechImage.setAttribute("data-number", techStack.length - 1);
-      return null;
-    }
-    if (newNumber === -1) {
-      shownTechImage.setAttribute("data-number", 0);
-      return null;
-    }
-    if (newNumber === techStack.length - 1) {
-      buttonClicked.style.display = "none";
-    }
-    if (newNumber === 0) {
-      buttonClicked.style.display = "none";
-    }
+const dropBoxes = Array.from(document.getElementsByClassName("just-border"));
+dropBoxes.forEach((elem) => {
+  elem.addEventListener("drop", dropHandler);
+  elem.addEventListener("dragover", dragoverHandler);
+});
 
-    shownTechImage.setAttribute("data-number", newNumber);
-    const currentTech = techStack[newNumber];
-    shownTechImage.setAttribute(
-      "src",
-      `./assets/images/${currentTech.filePath}`,
-    );
-    shownTechDesc.innerText = currentTech.tool;
-    shownTechDate.innerText = currentTech.date;
-  });
+function dragoverHandler(ev) {
+  ev.preventDefault();
+  ev.dataTransfer.dropEffect = "move";
+}
+function dropHandler(ev) {
+  ev.preventDefault();
+  if (!dropBoxes.includes(ev.target)) {
+    return;
+  }
+  const data = ev.dataTransfer.getData("application/my-node");
+  const draggedElement = document.getElementById(data);
+  ev.target.appendChild(draggedElement);
+}
+
+const modal = document.getElementById("customModal");
+const span = document.getElementsByClassName("close")[0];
+
+// Function to open the modal
+function openModal() {
+  console.log("fires", modal);
+  modal.style.display = "block";
+}
+
+// Function to close the modal when the user clicks on <span> (x)
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+if (document.readyState !== "loading") {
+  openModal();
 }
