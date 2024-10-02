@@ -1,0 +1,29 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+.modal-content {
+  position: relative;
+  width: fit-content; /* Ensures the content doesn't stretch */
+}
+
+.close {
+  position: absolute;
+  top: 8px; /* Adjust the vertical position inside the image */
+  right: 15px; /* Adjust the horizontal position inside the image */
+  font-size: 34px;
+  color: var(--main-text-color); /* You can change the color as needed */
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10000; /* Ensure it's above the image */
+}

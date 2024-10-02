@@ -9,8 +9,8 @@
   </head>
   <body>
     <div id="main-div">
-      <div class="just-border">
-        <div draggable="true" class="drag-elem" id="about-me-sec">
+      <div class="droppable-zone">
+        <div draggable="true" class="drag-elem" id="about-me">
           <h4>About Me</h4>
           <ul>
             <li>
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-      <div class="just-border">
+      <div class="droppable-zone">
         <div draggable="true" id="tech-div-main-main" class="drag-elem">
           <h4>My Tech Journey</h4>
           <div class="tech-div-main">
@@ -39,7 +39,7 @@
               />
             </div>
             <div id="tech-div-text">
-              <p id="change-desc">
+              <p id="change-desc-tech-stack">
                 My first real programming experience, started to learn about
                 variables, conditionals, loops and functions.
               </p>
@@ -64,21 +64,21 @@
         </div>
       </div>
 
-      <div class="just-border"></div>
-      <div class="just-border"></div>
-      <div class="just-border"></div>
-      <div class="just-border"></div>
+      <div class="droppable-zone"></div>
+      <div class="droppable-zone"></div>
+      <div class="droppable-zone"></div>
+      <div class="droppable-zone"></div>
     </div>
     <footer class="foot">
-      <p>&copy; 2024 Andrija Škontra. All rights reserved.</p>
+      <p>&copy; 2024 Andrija Škontra</p>
     </footer>
 
-    <!-- HTML -->
     <div id="customModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <img
-          src="./assets/images/darktutorial2.png"
+          id="modal-image"
+          src="./assets/images/droptemp3.png"
           alt="Description of image"
           style="width: 800px"
         />

@@ -1,7 +1,7 @@
 import { techStack } from "./data.js";
 
 const shownTechImage = document.getElementById("tech-image");
-const shownTechDesc = document.getElementById("change-desc");
+const shownTechDesc = document.getElementById("change-desc-tech-stack");
 const shownTechDate = document.getElementById("tech-stack-date");
 const nextImageButton = document.getElementById("change-image-button-next");
 const prevImageButton = document.getElementById("change-image-button-back");
