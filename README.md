@@ -6,7 +6,7 @@ Portfolio I'm writing in pure HTML, CSS, JS with 0 extrenal dependecies
 > Make sure to checkout my tech stack!
 
 > [!NOTE]
-> The drag 'n' is using only html Api
+> The drag 'n' drop is built using only HTML API
 
 
 
