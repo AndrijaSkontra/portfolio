@@ -3,7 +3,6 @@ import { isMobileDevice } from "./mobile-check.js";
 const modal = document.getElementById("customModal");
 const span = document.getElementsByClassName("close")[0];
 const modalImage = document.getElementById("modal-image");
-console.log(modalImage);
 
 function openModal() {
   if (isMobileDevice()) {
@@ -12,6 +11,14 @@ function openModal() {
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
 }
+
+// map escape to close the modal
+document.addEventListener("keydown", (ev) => {
+  if (ev.key === "Escape") {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});
 
 span.onclick = function () {
   modal.style.display = "none";

@@ -3,7 +3,7 @@
 .tech-div-main {
   display: flex;
   align-items: stretch;
-  height: 200px;
+  min-height: 200px;
 }
 
 @media only screen and (max-width: 600px) {
