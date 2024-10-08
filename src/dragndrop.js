@@ -1,14 +1,15 @@
 // state
 const dragBoxes = Array.from(document.getElementsByClassName("drag-elem"));
-const img = new Image();
+const dropBoxes = Array.from(document.getElementsByClassName("droppable-zone"));
+const img = new Image(); // template image when dragging
 img.src = "../assets/images/droptemp.png";
 
+// listeners dragBox
 for (const dragBox of dragBoxes) {
   dragBox.addEventListener("dragstart", dragstartHandler);
 }
 
-//listeners
-const dropBoxes = Array.from(document.getElementsByClassName("droppable-zone"));
+// listeners dropBox
 dropBoxes.forEach((elem) => {
   elem.addEventListener("drop", dropHandler);
   elem.addEventListener("dragover", dragoverHandler);
@@ -57,5 +58,22 @@ function dropHandler(ev) {
   const data = ev.dataTransfer.getData("application/my-node");
   const draggedElement = document.getElementById(data);
   ev.target.appendChild(draggedElement);
+  const position = getChildIndex(draggedElement);
+  localStorage.setItem(`layoutId: ${draggedElement.id}`, position);
   makeBackgroundOfElemTransparent(ev.target);
+}
+
+function getChildIndex(childElement) {
+  const droppableZone = childElement.closest(".droppable-zone");
+
+  // Return -69 if there is no parent with class "droppable-zone"
+  if (!droppableZone) {
+    return -69;
+  }
+
+  const droppableZoneParent = droppableZone.parentNode;
+  const children = Array.from(droppableZoneParent.children);
+  const index = children.indexOf(droppableZone);
+
+  return index;
 }
