@@ -5,6 +5,7 @@
 const mainDiv = document.getElementById("main-div");
 const techStack = document.getElementById("tech-div-main-main");
 const aboutMe = document.getElementById("about-me");
+const settings = document.getElementById("settings");
 const techPosition = parseInt(
   localStorage.getItem("layoutId: tech-div-main-main"),
   10,
@@ -14,10 +15,18 @@ const aboutMePosition = parseInt(
   10,
 );
 
-// check do the positions even exist
+const settingsPosition = parseInt(
+  localStorage.getItem("layoutId: settings"),
+  10,
+);
 
+// check do the positions even exist
 if (!isNaN(aboutMePosition)) {
   insertAtPosition(mainDiv, aboutMe, aboutMePosition);
+}
+
+if (!isNaN(settingsPosition)) {
+  insertAtPosition(mainDiv, settings, settingsPosition);
 }
 
 if (!isNaN(techPosition)) {
@@ -26,6 +35,5 @@ if (!isNaN(techPosition)) {
 
 function insertAtPosition(parent, element, position) {
   const insertNode = parent.children[position];
-  console.log("insert node", insertNode);
   insertNode.appendChild(element);
 }

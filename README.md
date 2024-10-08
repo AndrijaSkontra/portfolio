@@ -8,6 +8,8 @@ Portfolio I'm writing in pure HTML, CSS, JS with 0 extrenal dependecies
 > [!NOTE]
 > The drag 'n' drop is built using only HTML API
 
+#### Todo
+- [ ] Settings
 
 
 
