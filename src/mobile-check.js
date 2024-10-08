@@ -3,3 +3,8 @@ export function isMobileDevice() {
     navigator.userAgent,
   );
 }
+
+if (isMobileDevice()) {
+  //send user to /mobile-error
+  window.location.href = "../pages/mobile-error.html";
+}

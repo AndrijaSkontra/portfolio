@@ -7,7 +7,7 @@
     <link href="./assets/styles/main.css" rel="stylesheet" />
     <script async type="module" src="./src/main.js"></script>
   </head>
-  <body>
+  <body id="body">
     <div id="main-div">
       <div class="droppable-zone">
         <div draggable="true" class="drag-elem" id="about-me">
@@ -68,6 +68,15 @@
       <div class="droppable-zone">
         <div draggable="true" id="settings" class="drag-elem">
           <h4>Settings</h4>
+          <div class="toggle">
+            <input type="checkbox" id="btn" />
+            <label for="btn">
+              <span class="track"></span>
+              <span class="thumb">
+                <span class="eye"></span>
+              </span>
+            </label>
+          </div>
           <!--  TODO: TOGGLE FOR DARK MODE AND LANGUAGE SUPPORT -->
         </div>
       </div>
