@@ -3,6 +3,7 @@ body {
   background-attachment: fixed;
   font-family: "cascadia";
   color: var(--main-text-color);
+  line-height: 135%;
 }
 
 #main-div {
@@ -21,4 +22,8 @@ h4 {
 
 a {
   color: var(--main-text-color);
+}
+
+li {
+  margin-bottom: 3px;
 }
